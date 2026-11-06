@@ -1,9 +1,9 @@
-[README.md](https://github.com/user-attachments/files/34399610/README.md)
 # Data Readiness Gate
 
 **Interactive practice prototype for deciding whether an AI use case is ready to proceed**
 
 [Try the live demonstration](https://data-readiness-audit-gate-prototype.vercel.app/)
+[Inspect the JavaScript](./script.js)
 
 ## Purpose
 
@@ -17,13 +17,28 @@ A dataset can be technically available while still being unsuitable for an AI im
 - **Compliance:** Review access controls, vendor processing terms, and auditability questions.
 - **Deployment decision:** Explore a simulated hold/release gate and remediation scenario.
 
-## How to explore
+## What this prototype demonstrates
 
-Open the live demo, select each section, test the label consistency example, and use the simulated remediation control on the Deployment Gate section.
+A dataset can be available without being suitable for an AI release. This browser-based student project converts data-readiness and governance concerns into a **visible deployment hold/review decision**.
 
-## Technical format
+## Try it yourself
 
-Static HTML, CSS, and JavaScript interface deployed on Vercel. Its controls demonstrate business logic and decision states; no production AI model, external patient dataset, or live inference endpoint is connected.
+1. Open the **Data Sources** panel and identify ownership gaps.
+2. Use **Label Consistency → Run label consistency demo** to view conflicting decisions for the same fictional facts.
+3. Open **Bias Review** and **Compliance Review** to inspect underrepresented cases and open controls.
+4. Open **Deployment Gate**, toggle the **Simulate remediation** control, and examine which decisions change.
+
+## Design contributions
+
+Mapped source ownership, label integrity, subgroup review, and required audit fields into an interactive readiness demonstration. Translated findings into reviewer-friendly descriptions and a remediation checklist.
+
+## Technical boundaries
+
+Static HTML/CSS/JavaScript, deployed on Vercel. All names, scores, decisions, and evidence are invented examples. No real model inference, patient data, or live external database.
+
+## Next iteration
+
+Allow a user to adjust simulated source-quality values, preserve the hard-stop controls, export an evidence summary, and compare the before/after gate outcomes. Any further controls should stay clearly marked as synthetic. endpoint is connected.
 
 ## Data and safety
 
